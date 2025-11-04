@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/img_apps_choice" />
 
     <ImageView
-        android:id="@+id/img_scissor"
+        android:id="@+id/img_scissors"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="24dp"
@@ -71,7 +71,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="24dp"
         android:onClick="choosePaper"
-        app:layout_constraintEnd_toStartOf="@+id/img_scissor"
+        app:layout_constraintEnd_toStartOf="@+id/img_scissors"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/img_rock"
         app:layout_constraintTop_toBottomOf="@+id/txt_pick_your_move"

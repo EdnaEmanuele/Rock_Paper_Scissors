@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chooseScissors ( View view ) {
-        checkWinner( "scissor" );
+        checkWinner( "scissors" );
     }
 
     private String chooseAppsMove() {
-        String[] moveOptions = {"rock", "paper", "scissor"};
+        String[] moveOptions = {"rock", "paper", "scissors"};
         int randomNumber = new Random().nextInt(3);
 
         ImageView imgAppsChoice = findViewById(R.id.img_apps_choice);
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             case "paper":
                 imgAppsChoice.setImageResource(R.drawable.paper);
                 break;
-            case "scissor":
+            case "scissors":
                 imgAppsChoice.setImageResource(R.drawable.scissors);
                 break;
         }
@@ -64,16 +64,16 @@ public class MainActivity extends AppCompatActivity {
         TextView textResult = findViewById(R.id.text_game_result);
 
         if ( //app wins
-            (appsMove.equals("rock") && userChoice.equals("scissor")) ||
+            (appsMove.equals("rock") && userChoice.equals("scissors")) ||
             (appsMove.equals("paper") && userChoice.equals("rock"))  ||
-            (appsMove.equals("scissor") && userChoice.equals("paper"))
+            (appsMove.equals("scissors") && userChoice.equals("paper"))
         ){
             textResult.setText("You lose - the app wins");
             textResult.setTextColor(getResources().getColor(R.color.red));
         } else if ( //user wins
-             (userChoice.equals("rock") && appsMove.equals("scissor")) ||
+             (userChoice.equals("rock") && appsMove.equals("scissors")) ||
              (userChoice.equals("paper") && appsMove.equals("rock"))  ||
-             (userChoice.equals("scissor") && appsMove.equals("paper"))
+             (userChoice.equals("scissors") && appsMove.equals("paper"))
         ) {
             textResult.setText("You win - the app loses");
             textResult.setTextColor(getResources().getColor(R.color.green));
